@@ -2,7 +2,7 @@ import React from "react";
 import Divider from "./Divider.jsx";
 import Image from "next/image";
 import Info1 from "../../public/info1.png";
-// import Info2 from "../../public/info2.png";
+import Info2 from "../../public/info2.png";
 
 export default function About() {
   return (
@@ -43,9 +43,7 @@ export default function About() {
           color="from-green-400 to-blue-900"
         />
         <InfoCard
-          image={
-            "https://koin-x-five.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInfo2.1c273510.png&w=128&q=75"
-          }
+          image={Info2}
           title="Calculate Your Tax Liability"
           color="from-orange-500 to-red-600"
         />
