@@ -4,19 +4,19 @@ import TeamCard from "../ui/TeamCard";
 const Team = () => {
   const teamArray = [
     {
-      name: "Johm Smith",
+      name: "John Smith",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsam necessitatibus dolorem id, ullam aliquid mollitia nostrum accusantium cumque fugiat. Eveniet incidunt corrupti rem voluptatibus quibusdam aperiam officia? Autem architecto numquam fugit culpa blanditiis consequuntur?",
       image: "",
     },
     {
-      name: "Johm Smith",
+      name: "John Smith",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsam necessitatibus dolorem id, ullam aliquid mollitia nostrum accusantium cumque fugiat. Eveniet incidunt corrupti rem voluptatibus quibusdam aperiam officia? Autem architecto numquam fugit culpa blanditiis consequuntur?",
       image: "",
     },
     {
-      name: "Johm Smith",
+      name: "John Smith",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsam necessitatibus dolorem id, ullam aliquid mollitia nostrum accusantium cumque fugiat. Eveniet incidunt corrupti rem voluptatibus quibusdam aperiam officia? Autem architecto numquam fugit culpa blanditiis consequuntur?",
       image: "",

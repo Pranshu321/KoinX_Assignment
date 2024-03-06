@@ -2,7 +2,7 @@ import React from "react";
 
 export default function InfoBar() {
   return (
-    <div className="flex gap-5 mt-3 border-b-2 border-gray-300 overflow-auto">
+    <div className="flex gap-5 mt-3 lg:px-0 px-4 border-b-2 border-gray-300 overflow-auto">
       <div className="font-semibold pb-3 text-sm text-blue-700 border-blue-700 border-b-4">
         Overview
       </div>

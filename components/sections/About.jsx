@@ -44,7 +44,7 @@ function About() {
         />
         <InfoCard
           image={
-            "https://github-production-user-asset-6210df.s3.amazonaws.com/86917304/310505168-bfe6253f-b994-4487-a0f5-ce2442e480bf.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240306%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240306T125340Z&X-Amz-Expires=300&X-Amz-Signature=f12ae41b5322fd613b9ca4117c42513eb9325b44d690e68783fd7d88a02f2dc2&X-Amz-SignedHeaders=host&actor_id=86917304&key_id=0&repo_id=414511265"
+            "https://s3-alpha-sig.figma.com/img/b324/e6e3/5c577ca47c764bd8af01d840fe7ffccb?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iPVUHiBP1sj~Wqj-jX6JXhkY69WoofuEac3xLCr1EqW17s1ORlvyTaKXFhM8CY4BX8yTKWaFYSHXTJLoOTs9NNvpAQC5PCuRD-2MmQvQveuY3At4m7UG-9vt2MwzQdn-W0oYm3B~E5El1VPZebU-D9eXWZ6ekmEIan6L~Mmf8wR3hVKjqMqLVyTb2~P04q-16~IggO2xVsP7JgP9ewUFx1gU2EsrxDSKOgX-95csf6JMSKRWvUFWtzzej4xdZ8qIRY1I7YTqHSTyEuBYyb-ylUd3u6CcjTYUgK5M6JrhUFJ9gG2qdu4c02G-kAsF8Iiv1wE8wxwf8y-D2QONK8GnBg__"
           }
           title="Calculate Your Tax Liability"
           ifOutside={true}

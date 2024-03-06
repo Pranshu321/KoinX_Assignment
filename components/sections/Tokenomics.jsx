@@ -17,10 +17,6 @@ const Tokenomics = () => {
       },
     ],
   };
-  const config = {
-    type: "doughnut",
-    data: data,
-  };
   return (
     <div className="w-full my-7 p-4 flex flex-col bg-white">
       <div className="text-2xl font-bold">Tokenomics</div>
@@ -32,17 +28,17 @@ const Tokenomics = () => {
           </div>
           <div className="flex flex-col gap-y-2 justify-center items-center">
             <div className="flex gap-x-2">
-              <div className="w-3 h-3 bg-[#0082ff]"></div>
+              <div className="w-3 h-3 bg-[#0082ff] rounded-md"></div>
               <div className="text-sm font-semibold">Crowdsale investors</div>
             </div>
-            <div className="flex gap-x-2">
-              <div className="w-3 h-3 bg-[#FF9900]"></div>
+            <div className="flex gap-x-2 justify-center -ml-14">
+              <div className="w-3 h-3 bg-[#FF9900] rounded-md"></div>
               <div className="text-sm font-semibold">Foundation</div>
             </div>
           </div>
         </div>
       </div>
-      <div className="pt-3 pb-8 text-base">
+      <div className="pt-3 pb-8 text-base mt-2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odio
         accusantium perferendis? In officia adipisci animi exercitationem
         possimus tempora iste a, magnam totam sed dicta culpa rem error, impedit
