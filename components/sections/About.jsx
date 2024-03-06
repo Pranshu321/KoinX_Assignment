@@ -4,7 +4,7 @@ import Image from "next/image";
 import Info1 from "../../public/info1.png";
 import Info2 from "../../public/info2.png";
 
-export default function About() {
+function About() {
   return (
     <div className="bg-white mt-5 p-5 rounded-md">
       <div className="text-xl font-bold">About Bitcoin</div>
@@ -106,3 +106,4 @@ function InfoCard({ image, title, color }) {
     </div>
   );
 }
+export default About;
