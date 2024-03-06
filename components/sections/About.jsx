@@ -2,7 +2,6 @@ import React from "react";
 import Divider from "./Divider.jsx";
 import Image from "next/image";
 import Info1 from "../../public/info1.png";
-import Info2 from "../../public/info2.png";
 
 function About() {
   return (
@@ -40,11 +39,15 @@ function About() {
         <InfoCard
           image={Info1}
           title="Calculate Your Profits"
+          ifOutside={false}
           color="from-green-400 to-blue-900"
         />
         <InfoCard
-          image={Info2}
+          image={
+            "https://github-production-user-asset-6210df.s3.amazonaws.com/86917304/310505168-bfe6253f-b994-4487-a0f5-ce2442e480bf.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240306%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240306T125340Z&X-Amz-Expires=300&X-Amz-Signature=f12ae41b5322fd613b9ca4117c42513eb9325b44d690e68783fd7d88a02f2dc2&X-Amz-SignedHeaders=host&actor_id=86917304&key_id=0&repo_id=414511265"
+          }
           title="Calculate Your Tax Liability"
+          ifOutside={true}
           color="from-orange-500 to-red-600"
         />
       </div>
@@ -66,19 +69,29 @@ function About() {
   );
 }
 
-function InfoCard({ image, title, color }) {
+function InfoCard({ image, title, color, ifOutside }) {
   return (
     <div
       className={`bg-gradient-to-br ${color} p-2 rounded-md flex items-center gap-5 h-auto md:h-52 w-full md:w-full mt-5`}
     >
       <div className="h-fit">
-        <Image
-          alt="L"
-          src={image}
-          width={100}
-          height={100}
-          className="md:h-fit md:w-48"
-        />
+        {ifOutside ? (
+          <img
+            alt="L"
+            src={image}
+            width={100}
+            height={100}
+            className="md:h-fit md:w-48"
+          />
+        ) : (
+          <Image
+            alt="L"
+            src={image}
+            width={100}
+            height={100}
+            className="md:h-fit md:w-48"
+          />
+        )}
       </div>
       <div className="flex flex-col justify-between gap-3">
         <div className="text-base md:text-3xl font-bold text-white">
