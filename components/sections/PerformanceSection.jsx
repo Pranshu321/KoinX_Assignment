@@ -6,22 +6,22 @@ import { fetchingPrice, formatNumberWithCommas } from "@/lib/utils";
 import useState from "react-usestateref";
 import { useEffect } from "react";
 
-export default function PerformanceSection(coinType) {
+export default function PerformanceSection({ coinType = "bitcoin" }) {
   const [market_data, setMarketData, market_data_ref] = useState({});
 
   useEffect(() => {
     async function fetching() {
-      const data = await fetchingPrice("bitcoin");
+      const data = await fetchingPrice(coinType);
+      console.log(data);
       setMarketData(data[0]);
     }
     fetching();
-  }, []);
+  }, [market_data_ref.current, coinType]);
 
-  const todayLow = market_data_ref.current.low_24h;
-  console.log(market_data_ref.current);
-  const todayHigh = market_data_ref.current.high_24h;
-  const lowPrice = market_data_ref.current.atl;
-  const highPrice = market_data_ref.current.ath;
+  const todayLow = market_data_ref.current?.low_24h;
+  const todayHigh = market_data_ref.current?.high_24h;
+  const lowPrice = market_data_ref.current?.atl;
+  const highPrice = market_data_ref.current?.ath;
 
   return (
     <div className="bg-white drop-shadow-lg rounded-lg lg:p-8 p-4 h-fit my-6">
@@ -34,7 +34,7 @@ export default function PerformanceSection(coinType) {
         </div>
         <PerformanceBar
           highPrice={todayHigh}
-          currentPrice={market_data_ref.current.current_price}
+          currentPrice={market_data_ref.current?.current_price}
         />
 
         <div className="flex flex-col items-center w-[15%] text-center ">
@@ -51,7 +51,7 @@ export default function PerformanceSection(coinType) {
         {/* Performance Bar needs currenPrice and highPrice */}
         <PerformanceBar
           highPrice={highPrice}
-          currentPrice={market_data_ref.current.current_price}
+          currentPrice={market_data_ref.current?.current_price}
         />
         <div className="flex flex-col items-center w-[15%] text-center">
           <p>52W High</p>
@@ -73,53 +73,57 @@ export default function PerformanceSection(coinType) {
         <div className="flex lg:flex-row flex-col lg:gap-12">
           <div className="w-full">
             <FundamentalsRow
-              title={`${market_data_ref.current.name} Price`}
+              title={`${market_data_ref.current?.name} Price`}
               value={`$${formatNumberWithCommas(
-                market_data_ref.current.current_price
+                market_data_ref.current?.current_price
               )}`}
             />
             <FundamentalsRow
               title="24h Low/24h High"
               value={`$${formatNumberWithCommas(
-                market_data_ref.current.low_24h
+                market_data_ref.current?.low_24h
               )} / $${formatNumberWithCommas(
-                market_data_ref.current.high_24h
+                market_data_ref.current?.high_24h
               )}`}
             />
 
             <FundamentalsRow
               title="Trading Volume"
               value={`${formatNumberWithCommas(
-                market_data_ref.current.circulating_supply
-              )} ${market_data_ref.current.symbol?.toUpperCase()}`}
+                market_data_ref.current?.circulating_supply
+              )} ${market_data_ref.current?.symbol?.toUpperCase()}`}
             />
 
             <FundamentalsRow
               title="Market Cap Rank"
-              value={`#${market_data_ref.current.market_cap_rank}`}
+              value={`#${market_data_ref.current?.market_cap_rank}`}
             />
           </div>
           <div className="w-full">
             <FundamentalsRow
               title="Market Cap"
               value={`$${formatNumberWithCommas(
-                market_data_ref.current.market_cap
+                market_data_ref.current?.market_cap
               )}`}
             />
             <FundamentalsRow
               title="Volume / Market Cap"
               value={`$${formatNumberWithCommas(
-                market_data_ref.current.total_volume
+                market_data_ref.current?.total_volume
               )}`}
             />
 
             <FundamentalsRow
               title="All Time High"
-              value={`$${formatNumberWithCommas(market_data_ref.current.ath)}`}
+              value={`$${formatNumberWithCommas(
+                market_data_ref?.current?.ath
+              )}`}
             />
             <FundamentalsRow
               title="All Time Low"
-              value={`$${formatNumberWithCommas(market_data_ref.current.atl)}`}
+              value={`$${formatNumberWithCommas(
+                market_data_ref?.current?.atl
+              )}`}
             />
           </div>
         </div>
