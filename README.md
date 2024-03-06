@@ -85,6 +85,9 @@ COINGECKO_API_KEY=your-api-key
 - [Tailwind CSS](https://tailwindcss.com/)
 - [TradingView](https://www.tradingview.com/)
 
-## Video
+## Demo Video
+
+
+https://github.com/Pranshu321/KoinX_Assignment/assets/86917304/07d9d346-9563-4f91-9f1c-0ac9aa205c0d
 
 
